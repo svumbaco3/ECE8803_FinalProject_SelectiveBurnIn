@@ -1,2 +1,4 @@
-# ECE8803_FinalProject_SelectiveBurnIn
-Final Project for ECE 8803: AI for Semicondcutros - Selective Burn-In Via Spatial Risk Maps from Wafer-Level Parametric Data
+# ECE8803\_FinalProject\_SelectiveBurnIn
+
+Final Project for ECE 8803: AI for Semiconductors - Selective Burn-In Via Spatial Risk Maps from Wafer-Level Parametric Data
+

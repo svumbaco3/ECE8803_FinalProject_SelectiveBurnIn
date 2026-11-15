@@ -1,0 +1,15 @@
+# Raw KAI CSVs (~750 MB each) exceed GitHub's 100 MB limit; keep locally
+Wafer Parametric Dataset/*.csv
+# Local data caches
+cache/
+*.parquet
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+# Editors / OS
+.vscode/
+desktop.ini
+Thumbs.db

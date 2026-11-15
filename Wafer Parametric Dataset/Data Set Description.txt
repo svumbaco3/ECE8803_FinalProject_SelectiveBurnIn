@@ -1,0 +1,155 @@
+1. Title: Simulated Analog Wafer Test Data for Pattern Recognition
+
+2. Source Information:
+	(a) Authors:
+		Martin Pleschberger: martin.pleschberger@k-ai.at
+		Michael Scheiber: michael.scheiber@k-ai.at
+		Stefan Schrunner: stefan.schrunner@k-ai.at
+		KAI - Kompetenzzentrum Automobil- und Industrie-
+		      elektronik GmbH, Villach, Austria
+	(b) Date: November, 2018
+	(c) Acknowledgement:
+		The work has been performed in the project Power Semi-
+		conductor and Electronics Manufacturing 4.0 (SemI40), 
+		under grant agreement No 692466. The project is co-funded
+		by grants from Austria (BMVIT-IKT der Zukunft, FFG project
+		no. 853338), Germany, Italy, France, Portugal and - 
+		Electronic Component Systems for European Leadership Joint
+		Undertaking (ECSEL JU).
+
+3. Past Usage:
+	(*)  M. Pleschberger:
+	      "Runtime Optimization for Automated Pattern Analysis",
+	      Master Thesis, Alpen-Adria Universität, Klagenfurt, 2018.
+	(**) S. Schrunner, O. Bluder, A. Zernig, A. Kaestner, R. Kern:
+	      "A Comparison of Supervised Approaches for Process
+	      Pattern Recognition in Analog Semiconductor Wafer
+	      Test Data", IEEE International Conference on Machine
+	      Learning and Applications, Florida, USA, 2018.
+
+4. Relevant Information:
+
+	This data set was generated in accordance with the semiconductor
+	industry and contains simulated electrical test data of manufactured
+	devices, like resistances, voltages, etc. Devices are manufactured
+	on round wafers, i.e. slices of semiconductor material. If the test
+	values of devices form an interesting spatial pattern on the wafer,
+	this might result from deviations during processing and hence,
+	must be traced.
+		
+	A bunch of wafers is aggregated to a so-called lot. The dataset
+	contains 4 training lots and 1 test lot à 200 wafers. In this
+	dataset, each wafer contains approx. 17000 devices. Each device
+	is assigned 10 different tests, which show one out of 5 patterns
+	each, simulated with (ring, spot, trend, twospots and crescent)
+	and without ('_pure' suffix) a randomized amount of Gaussian
+	white noise.
+	
+	For pattern recognition, each test column on the wafer is regarded
+	as a spatial image, the so-called wafermap. In particular, a
+	wafermap is an image, where the position of each pixel is uniquely
+	identified through the x- and y-coordinates and the coloring is
+	described by a value of one of the test columns.
+
+	Each wafermap in a lot is uniquely identified by its wafer number. 
+	Classes or clusters should not be assigned to each data row
+	separately, but rather to wafermaps. The data represents wafermaps
+	as spatial objects, with x- and y- coordinates. The values of such
+	a map are characterized by all values in the corresponding test
+	column for given lot and wafer numbers.
+
+	The five classes (patterns) are characterized as follows:
+		1.) ring:     a ring pattern along the border of the wafer
+		2.) spot:     a single circular or elliptic spot, placed
+			      randomly on the wafer
+		3.) trend:    a constant gradient over the wafer (with
+			      changes w.r.t. direction)
+		4.) twospots: two spots at the left and right edge
+			      of the wafer
+		5.) crescent: a crescent-shaped area on the right edge
+			      of the wafer
+
+	Additional information on electrical wafer test data, their
+	background and structure, can be found in the sources (*) and (**)
+	(referred in 'Past Usage').
+
+	The data is provided in 4 training and 1 test CSV file.
+	Each dataset contains data of one lot.
+	Files:
+		training data:
+		-- training_1.csv
+		-- training_2.csv
+		-- training_3.csv
+		-- training_4.csv
+
+		test data:
+		-- test.csv
+
+5. Number of Instances: 
+  |--------------------------------------------------------------|
+  |      Dataset       |  # of instances  |  Wafermap numbers    |
+  |--------------------------------------------------------------|
+  |   training_1.csv   |     3.501.800    |      1  to  200      |
+  |   training_2.csv   |     3.501.800    |    201  to  400      |
+  |   training_3.csv   |     3.501.800    |    401  to  600      |
+  |   training_4.csv   |     3.501.800    |    601  to  800      |
+  |--------------------------------------------------------------|
+  |      test.csv      |     3.501.800    |    801  to 1000      |
+  |--------------------------------------------------------------|
+
+6. Number of Attributes: 14
+
+7. Attribute Information:
+   -- Short overview
+	-- 1.	(lot)
+	-- 2.	(wafer)
+	-- 3.	(x)
+	-- 4.	(y)
+	-- 5.	(ring)
+	-- 6.	(spot)
+	-- 7.	(trend)
+	-- 8.	(twospots)
+	-- 9.	(crescent)
+	-- 10.	(ring_pure)
+	-- 11.	(spot_pure)
+	-- 12.	(trend_pure)
+	-- 13.	(twospots_pure)
+	-- 14.	(crescent_pure)
+
+   -- Complete attribute documentation:
+	1 lot: lot number
+	2 wafer: wafer identification number
+	  -- Lot_1 (training_1.csv) :   1  -  200
+	  -- Lot_2 (training_2.csv) : 201  -  400
+	  -- Lot_3 (training_3.csv) : 401  -  600
+	  -- Lot_4 (training_4.csv) : 601  -  800
+	  -- Lot_5    (test.csv)    : 801  - 1000
+	3 x:		x-coordinate of device on wafer
+	  -- range for all lots:  1 to 115
+	4 y:		y-coordinate of device on wafer
+	  -- range for all lots:  1 to 193
+	5 ring:		 simulated values of ring pattern with noise
+	6 spot:		 simulated values of spot pattern with noise
+	7 trend:	 simulated values of trend pattern with noise
+	8 twospots:	 simulated values of twospots pattern with noise
+	9 crescent:	 simulated values of crescent pattern with noise
+       10 ring_pure:	 simulated values of ring pattern without noise
+       11 spot_pure:	 simulated values of spot pattern without noise
+       12 trend_pure:	 simulated values of trend pattern without noise
+       13 twospots_pure: simulated values of twospots pattern without noise
+       14 crescent_pure: simulated values of crescent pattern without noise
+
+8. Missing Attribute Values: none
+
+9. Class (Pattern) Distribution:
+  |------------------------------------------------------------|
+  |      Dataset       |  1.)  |  2.)  |  3.)  |  4.)  |  5.)  |
+  |------------------------------------------------------------|
+  |   training_1.csv   |  200  |  200  |  200  |  200  |  200  |
+  |   training_2.csv   |  200  |  200  |  200  |  200  |  200  |
+  |   training_3.csv   |  200  |  200  |  200  |  200  |  200  |
+  |   training_4.csv   |  200  |  200  |  200  |  200  |  200  |
+  |------------------------------------------------------------|
+  |      test.csv      |  200  |  200  |  200  |  200  |  200  |
+  |------------------------------------------------------------|
+
