@@ -1,0 +1,8 @@
+{
+  "epochs": 15,
+  "best_val_macro_f1": 0.5953928290659336,
+  "best_epoch": 14,
+  "n_train": 15383,
+  "n_val": 2978,
+  "input": "one-hot outside/pass/fail, 64x64 stretched to 193x115"
+}
