@@ -1,0 +1,28 @@
+{
+  "best_epochs_pretrained": {
+    "Lot_1": 19,
+    "Lot_2": 19,
+    "Lot_3": 17,
+    "Lot_4": 20
+  },
+  "best_epochs_scratch": {
+    "Lot_1": 19,
+    "Lot_2": 19,
+    "Lot_3": 17,
+    "Lot_4": 20
+  },
+  "final_epochs": {
+    "unet_pretrained": 19,
+    "unet_scratch": 19
+  },
+  "cfg": {
+    "derived": true,
+    "epochs": null,
+    "lr": 0.002,
+    "pos_weight": 10.0,
+    "dropout": 0.2,
+    "weight_decay": 0.01,
+    "batch": 4,
+    "eval_every": null
+  }
+}

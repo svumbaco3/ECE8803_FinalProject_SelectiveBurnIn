@@ -1,0 +1,7 @@
+,method,recall@10%burn,burn%@90%recall,AP
+20 epochs,U-Net (pre-trained),0.5937,0.4739,0.2777
+20 epochs,U-Net (no pre-training),0.5932,0.4739,0.2784
+20 epochs,Feature GBM,0.593,0.4788,0.2788
+40 epochs,U-Net (pre-trained),0.5939,0.4745,0.2797
+40 epochs,U-Net (no pre-training),0.5933,0.4745,0.2789
+40 epochs,Feature GBM,0.593,0.4788,0.2788

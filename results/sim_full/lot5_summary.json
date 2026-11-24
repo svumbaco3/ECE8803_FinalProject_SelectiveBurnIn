@@ -1,0 +1,94 @@
+{
+  "recall_ceiling": 0.8625525656163902,
+  "burn_budget": 0.1,
+  "unet_epochs": {
+    "U-Net (no pre-training)": 19,
+    "U-Net (pre-trained)": 19
+  },
+  "latent_rate_no_cluster": 0.005232371464292697,
+  "c_burnin": 0.5,
+  "c_escape_slide": 100,
+  "n_test_wafers": 200,
+  "metrics": {
+    "Random": {
+      "recall@5%burn": 0.0504,
+      "recall@10%burn": 0.0997,
+      "recall@20%burn": 0.2005,
+      "burn%@80%recall": 0.798,
+      "burn%@90%recall": 0.8987,
+      "AUC": 0.501,
+      "AP": 0.015,
+      "DPPM@10%burn": 13477.3807
+    },
+    "Distance to fail": {
+      "recall@5%burn": 0.1616,
+      "recall@10%burn": 0.3231,
+      "recall@20%burn": 0.5528,
+      "burn%@80%recall": 0.5022,
+      "burn%@90%recall": 0.7313,
+      "AUC": 0.7236,
+      "AP": 0.0375,
+      "DPPM@10%burn": 10167.2199
+    },
+    "Wafer-level fallback": {
+      "recall@5%burn": 0.1677,
+      "recall@10%burn": 0.2778,
+      "recall@20%burn": 0.4181,
+      "burn%@80%recall": 0.5676,
+      "burn%@90%recall": 0.7442,
+      "AUC": 0.6804,
+      "AP": 0.0332,
+      "DPPM@10%burn": 10840.1131
+    },
+    "Neighbor z-score": {
+      "recall@5%burn": 0.3663,
+      "recall@10%burn": 0.4622,
+      "recall@20%burn": 0.5759,
+      "burn%@80%recall": 0.5407,
+      "burn%@90%recall": 0.7511,
+      "AUC": 0.7403,
+      "AP": 0.1689,
+      "DPPM@10%burn": 8095.1866
+    },
+    "Hotelling T2 (PCA)": {
+      "recall@5%burn": 0.4022,
+      "recall@10%burn": 0.4875,
+      "recall@20%burn": 0.5943,
+      "burn%@80%recall": 0.5275,
+      "burn%@90%recall": 0.749,
+      "AUC": 0.7509,
+      "AP": 0.2324,
+      "DPPM@10%burn": 7716.4773
+    },
+    "Feature GBM": {
+      "recall@5%burn": 0.4804,
+      "recall@10%burn": 0.5971,
+      "recall@20%burn": 0.7555,
+      "burn%@80%recall": 0.2424,
+      "burn%@90%recall": 0.4601,
+      "AUC": 0.8491,
+      "AP": 0.2974,
+      "DPPM@10%burn": 6076.4043
+    },
+    "U-Net (no pre-training)": {
+      "recall@5%burn": 0.4776,
+      "recall@10%burn": 0.5973,
+      "recall@20%burn": 0.7558,
+      "burn%@80%recall": 0.2397,
+      "burn%@90%recall": 0.4523,
+      "AUC": 0.85,
+      "AP": 0.2973,
+      "DPPM@10%burn": 6074.3683
+    },
+    "U-Net (pre-trained)": {
+      "recall@5%burn": 0.478,
+      "recall@10%burn": 0.5965,
+      "recall@20%burn": 0.7569,
+      "burn%@80%recall": 0.2401,
+      "burn%@90%recall": 0.4544,
+      "AUC": 0.8498,
+      "AP": 0.2957,
+      "DPPM@10%burn": 6086.0152
+    }
+  }
+}
