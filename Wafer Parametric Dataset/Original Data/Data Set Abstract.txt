@@ -1,0 +1,15 @@
+This data set was generated in accordance with the semiconductor industry and contains simulated electrical test data of manufactured devices, like resistances, voltages, etc. Devices are manufactured on round wafers, i.e. slices of semiconductor material. If the test values of devices form an interesting spatial pattern on the wafer, this might result from deviations during processing and hence, must be traced.
+        
+A bunch of wafers is aggregated to a so-called lot. The dataset contains 4 training lots and 1 test lot à 200 wafers. In this dataset, each wafer contains approx. 17000 devices. Each device is assigned 10 different tests, which show one out of 5 patterns each, simulated with (ring, spot, trend, twospots and crescent) and without ('_pure' suffix) a randomized amount of Gaussian white noise.
+    
+For pattern recognition, each test column on the wafer is regarded as a spatial image, the so-called wafermap. In particular, a wafermap is an image, where the position of each pixel is uniquely identified through the x- and y-coordinates and the coloring is described by a value of one of the test columns.
+
+Each wafermap in a lot is uniquely identified by its wafer number. Classes or clusters should not be assigned to each data row separately, but rather to wafermaps. The data represents wafermaps as spatial objects, with x- and y- coordinates. The values of such a map are characterized by all values in the corresponding test column for given lot and wafer numbers.
+
+The five classes (patterns) are characterized as follows:
+
+ring: a ring pattern along the border of the wafer
+spot: a single circular or elliptic spot, placed randomly on the wafer
+trend: a constant gradient over the wafer (with changes w.r.t. direction)
+twospots: two spots at the left and right edge of the wafer
+crescent: a crescent-shaped area on the right edge of the wafer
