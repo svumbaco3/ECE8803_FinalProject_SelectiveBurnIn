@@ -1,0 +1,62 @@
+{
+  "seed": 8803,
+  "limit_k_sigma": 6.0,
+  "wm_overlay_lot_fraction": 0.3,
+  "pattern_mix": {
+    "none": 0.25,
+    "Edge-Ring": 0.12,
+    "Edge-Loc": 0.12,
+    "Center": 0.1,
+    "Loc": 0.12,
+    "Scratch": 0.1,
+    "Donut": 0.07,
+    "Random": 0.07,
+    "Near-full": 0.05
+  },
+  "min_cluster_px": {
+    "default": 32,
+    "Scratch": 8
+  },
+  "shift_classes": [
+    "Loc",
+    "Scratch"
+  ],
+  "max_shift": 0.25,
+  "cluster_fail_frac": [
+    0.3,
+    0.6
+  ],
+  "random_fail_rate": 0.005,
+  "fail_n_params": [
+    1,
+    2
+  ],
+  "fail_excess_sigma": [
+    0.5,
+    4.0
+  ],
+  "base_risk": [
+    0.004,
+    0.007
+  ],
+  "m_max": 10.0,
+  "touch_dist": 1.7,
+  "decay_len": 3.0,
+  "clued_frac": [
+    0.6,
+    0.8
+  ],
+  "clue_n_params": [
+    1,
+    3
+  ],
+  "clue_sigma": [
+    1.0,
+    3.0
+  ],
+  "clue_margin_sigma": 0.25,
+  "target_latent_rate": [
+    0.01,
+    0.02
+  ]
+}
